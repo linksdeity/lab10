@@ -54,35 +54,37 @@ namespace GrandCircusLabOOPCircle
             Radius = radius;
         }
 
-
+        //does the math
         public double CalculateCircumference()
         {
             return System.Math.Round( ((2 * System.Math.PI) * this.Radius), 2 );
         }
 
-
+        //returns the formatted number
         public string CalculateFormattedCircumference()
         {
             return FormatNumber(CalculateCircumference());
         }
 
-
+        //does the math
         public double CalculateArea()
         {
             return System.Math.Round( (System.Math.PI * (this.Radius * this.Radius)), 2 );
         }
 
-
+        //returns the formatted number
         public string CalculateFormattedArea()
         {
             return FormatNumber(CalculateArea());
         }
 
 
-        //round number to 2 decimals
+        //sets number to a string
         private string FormatNumber(double x)
         {
-            string numberText = ("" + x);
+            string numberText = "";
+
+            numberText += x;
 
             return numberText;
         }
